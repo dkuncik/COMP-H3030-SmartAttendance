@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SmartAttPrototype</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lecturer">Lecturer</string>
+    <string name="login">Login</string>
+    <string name="smart_attendance">Smart Attendance</string>
+    <string name="student">Student</string>
+    <string name="todo">TODO</string>
+    <string name="start">Start</string>
+    <string name="timetable">Timetable</string>
+    <string name="settings">Settings</string>
+    <string name="lecturer_menu">Lecturer Menu</string>
+    <string name="student_menu">Student Menu</string>
+    <string name="scan">Scan</string>
+    <string name="you_are_attending_the_lecture">You are attending the Lecture</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+</resources>
