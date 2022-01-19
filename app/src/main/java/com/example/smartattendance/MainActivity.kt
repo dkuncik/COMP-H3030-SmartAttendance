@@ -1,4 +1,4 @@
-package com.example.smartattprototype
+package com.example.smartattendance
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

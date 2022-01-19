@@ -1,4 +1,4 @@
-package com.example.smartattprototype
+package com.example.smartattendance
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,8 +9,7 @@ import android.widget.Button
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
-
-class StudentLogged : Fragment(), View.OnClickListener {
+class Login : Fragment() , View.OnClickListener {
 
     var navController : NavController? = null
     override fun onCreateView(
@@ -18,24 +17,24 @@ class StudentLogged : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_student_logged, container, false)
+        return inflater.inflate(R.layout.fragment_login, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        view.findViewById<Button>(R.id.Enter).setOnClickListener (this)
-        view.findViewById<Button>(R.id.SettingsStudent).setOnClickListener (this)
-
+        view.findViewById<Button>(R.id.LecturerBTN).setOnClickListener (this)
+        view.findViewById<Button>(R.id.studentLogged).setOnClickListener (this)
 
 
     }
+
     override fun onClick(v: View?) {
         when(v!!.id){
-            R.id.Enter -> navController!!.navigate(R.id.action_studentLogged_to_studentStart)
-            R.id.SettingsStudent -> navController!!.navigate(R.id.action_studentLogged_to_login)
-
+            R.id.LecturerBTN -> navController!!.navigate(R.id.action_login_to_lecturerLogged)
+            R.id.studentLogged -> navController!!.navigate(R.id.action_login_to_studentLogged)
         }
 
     }
-}
 
+}

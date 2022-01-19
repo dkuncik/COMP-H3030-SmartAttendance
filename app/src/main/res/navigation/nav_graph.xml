@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/login"
-        android:name="com.example.smartattprototype.Login"
+        android:name="com.example.smartattendance.Login"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/lecturerLogged"
-        android:name="com.example.smartattprototype.LecturerLogged"
+        android:name="com.example.smartattendance.LecturerLogged"
         android:label="fragment_lecturer_logged"
         tools:layout="@layout/fragment_lecturer_logged" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/studentLogged"
-        android:name="com.example.smartattprototype.StudentLogged"
+        android:name="com.example.smartattendance.StudentLogged"
         android:label="fragment_student_logged"
         tools:layout="@layout/fragment_student_logged" >
 
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/leturerStart"
-        android:name="com.example.smartattprototype.LeturerStart"
+        android:name="com.example.smartattendance.LeturerStart"
         android:label="fragment_leturer_start"
         tools:layout="@layout/fragment_leturer_start" >
 
@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/studentStart"
-        android:name="com.example.smartattprototype.StudentStart"
+        android:name="com.example.smartattendance.StudentStart"
         android:label="fragment_student_start"
         tools:layout="@layout/fragment_student_start" >
         <action
@@ -70,7 +70,7 @@
     </fragment>
     <fragment
         android:id="@+id/lecturePaused"
-        android:name="com.example.smartattprototype.LecturePaused"
+        android:name="com.example.smartattendance.LecturePaused"
         android:label="fragment_lecture_paused"
         tools:layout="@layout/fragment_lecture_paused" >
         <action
@@ -82,7 +82,7 @@
     </fragment>
     <fragment
         android:id="@+id/classLeaved"
-        android:name="com.example.smartattprototype.ClassLeaved"
+        android:name="com.example.smartattendance.ClassLeaved"
         android:label="fragment_class_leaved"
         tools:layout="@layout/fragment_class_leaved" >
         <action

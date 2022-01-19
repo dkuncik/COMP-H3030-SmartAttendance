@@ -1,4 +1,4 @@
-package com.example.smartattprototype
+package com.example.smartattendance
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
