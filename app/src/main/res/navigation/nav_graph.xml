@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/lecturerLogged"
-        android:name="com.smartAttendance.LecturerLogged"
+        android:name="com.smartAttendance.lecturer.LecturerLogged"
         android:label="fragment_lecturer_logged"
         tools:layout="@layout/fragment_lecturer_logged">
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/studentLogged"
-        android:name="com.smartAttendance.StudentLogged"
+        android:name="com.smartAttendance.student.StudentLogged"
         android:label="fragment_student_logged"
         tools:layout="@layout/fragment_student_logged">
 
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/leturerStart"
-        android:name="com.smartAttendance.LeturerStart"
+        android:name="com.smartAttendance.lecturer.LeturerStart"
         android:label="fragment_leturer_start"
         tools:layout="@layout/fragment_leturer_start">
 
@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/studentStart"
-        android:name="com.smartAttendance.StudentStart"
+        android:name="com.smartAttendance.student.StudentStart"
         android:label="fragment_student_start"
         tools:layout="@layout/fragment_student_start">
         <action
@@ -70,7 +70,7 @@
     </fragment>
     <fragment
         android:id="@+id/lecturePaused"
-        android:name="com.smartAttendance.LecturePaused"
+        android:name="com.smartAttendance.lecturer.LecturePaused"
         android:label="fragment_lecture_paused"
         tools:layout="@layout/fragment_lecture_paused">
         <action
@@ -82,7 +82,7 @@
     </fragment>
     <fragment
         android:id="@+id/classLeaved"
-        android:name="com.smartAttendance.ClassLeaved"
+        android:name="com.smartAttendance.student.ClassLeaved"
         android:label="fragment_class_leaved"
         tools:layout="@layout/fragment_class_leaved">
         <action
