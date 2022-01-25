@@ -1,22 +1,19 @@
 <resources>
-    <string name="app_name">Smart Attendance</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="lecturer">Lecturer</string>
-    <string name="login">Login</string>
-    <string name="student">Student</string>
-    <string name="todo">TODO</string>
-    <string name="start">Start</string>
+    <!-- Lecturer Menu Definitions -->
+
+    <!-- Student Menu Definitions -->
+    <string name="student">STUDENT</string>
+    <string name="main_menu">Main Menu</string>
     <string name="timetable">Timetable</string>
     <string name="settings">Settings</string>
-    <string name="lecturer_menu">Lecturer Menu</string>
-    <string name="student_menu">Student Menu</string>
-    <string name="scan">Scan</string>
-    <string name="you_are_attending_the_lecture">You are attending the Lecture</string>
-    <string name="_1">1</string>
-    <string name="_2">2</string>
-    <string name="smart_attendance">Smart Attendance</string>
+    <string name="scan_tag">Scan Tag</string>
 
+    <!-- Menu Definitions and Styling -->
+    <string name="app_name">Smart Attendance</string>
+    <string name="attending_class">Attending class...</string>
+    <string name="geo_fence_activated">Geo-Fence Activated</string>
+    <string name="class_information">Class Information</string>
+    <string name="in_class">In class...</string>
     <color name="background_color">#393b57</color>
     <color name="button_color_main">#395751</color>
     <color name="button_color_secondary">#574e39</color>

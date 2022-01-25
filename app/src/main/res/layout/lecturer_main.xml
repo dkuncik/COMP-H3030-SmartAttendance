@@ -8,7 +8,7 @@
     tools:context="com.smartAttendance.lecturer.LecturerLogged">
 
     <TextView
-        android:id="@+id/menu_header"
+        android:id="@+id/menu_Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/smart_attendance"
@@ -30,7 +30,7 @@
         tools:layout_editor_absoluteY="343dp"></Button>
 
     <TextView
-        android:id="@+id/menu_user_display"
+        android:id="@+id/menu_userType_Student"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lecturer_menu"
@@ -56,7 +56,7 @@
         tools:ignore="TextContrastCheck"></Button>
 
     <Button
-        android:id="@+id/TimetableStudent"
+        android:id="@+id/student_Timetable"
         android:layout_width="253dp"
         android:layout_height="48dp"
         android:text="@string/timetable"

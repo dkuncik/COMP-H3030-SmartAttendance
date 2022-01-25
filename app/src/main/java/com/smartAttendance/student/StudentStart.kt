@@ -25,16 +25,16 @@ class StudentStart : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        view.findViewById<Button>(R.id.EndClass).setOnClickListener(this)
-        view.findViewById<Button>(R.id.LeaveLecture).setOnClickListener(this)
+        view.findViewById<Button>(R.id.class_Info).setOnClickListener(this)
+        view.findViewById<Button>(R.id.geoFence_active).setOnClickListener(this)
 
 
     }
 
     override fun onClick(v: View?) {
         when (v!!.id) {
-            R.id.EndClass -> navController!!.navigate(R.id.action_studentStart_to_studentLogged)
-            R.id.LeaveLecture -> navController!!.navigate(R.id.action_studentStart_to_classLeaved)
+            R.id.class_Info -> navController!!.navigate(R.id.action_studentStart_to_studentLogged)
+            R.id.geoFence_active -> navController!!.navigate(R.id.action_studentStart_to_classLeaved)
         }
 
     }

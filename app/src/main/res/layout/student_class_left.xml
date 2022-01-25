@@ -8,7 +8,7 @@
     tools:context="com.smartAttendance.student.ClassLeaved">
 
     <TextView
-        android:id="@+id/menu_header"
+        android:id="@+id/menu_Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/smart_attendance"
@@ -20,7 +20,7 @@
         tools:layout_editor_absoluteY="264dp" />
 
     <TextView
-        android:id="@+id/menu_user_display"
+        android:id="@+id/menu_userType_Student"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/student_menu"
@@ -32,7 +32,7 @@
         tools:layout_editor_absoluteY="192dp"></TextView>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/studen_classStatus"
         android:layout_width="245dp"
         android:layout_height="68dp"
         android:text="You left the Lecture"
