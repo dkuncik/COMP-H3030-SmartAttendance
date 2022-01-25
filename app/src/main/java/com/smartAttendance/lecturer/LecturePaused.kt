@@ -18,7 +18,7 @@ class LecturePaused : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lecture_paused, container, false)
+        return inflater.inflate(R.layout.lecturer_class_paused, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

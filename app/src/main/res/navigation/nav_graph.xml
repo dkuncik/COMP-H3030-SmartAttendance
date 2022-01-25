@@ -9,7 +9,7 @@
         android:id="@+id/login"
         android:name="com.smartAttendance.Login"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login">
+        tools:layout="@layout/main_login">
         <action
             android:id="@+id/action_login_to_lecturerLogged"
             app:destination="@id/lecturerLogged" />
@@ -21,7 +21,7 @@
         android:id="@+id/lecturerLogged"
         android:name="com.smartAttendance.lecturer.LecturerLogged"
         android:label="fragment_lecturer_logged"
-        tools:layout="@layout/fragment_lecturer_logged">
+        tools:layout="@layout/lecturer_main">
         <action
             android:id="@+id/action_lecturerLogged_to_leturerStart"
             app:destination="@id/leturerStart" />
@@ -33,7 +33,7 @@
         android:id="@+id/studentLogged"
         android:name="com.smartAttendance.student.StudentLogged"
         android:label="fragment_student_logged"
-        tools:layout="@layout/fragment_student_logged">
+        tools:layout="@layout/student_main">
 
 
         <action
@@ -47,7 +47,7 @@
         android:id="@+id/leturerStart"
         android:name="com.smartAttendance.lecturer.LeturerStart"
         android:label="fragment_leturer_start"
-        tools:layout="@layout/fragment_leturer_start">
+        tools:layout="@layout/lecturer_class_start">
 
         <action
             android:id="@+id/action_leturerStart_to_lecturePaused"
@@ -60,7 +60,7 @@
         android:id="@+id/studentStart"
         android:name="com.smartAttendance.student.StudentStart"
         android:label="fragment_student_start"
-        tools:layout="@layout/fragment_student_start">
+        tools:layout="@layout/student_classRegistered">
         <action
             android:id="@+id/action_studentStart_to_classLeaved"
             app:destination="@id/classLeaved" />
@@ -72,7 +72,7 @@
         android:id="@+id/lecturePaused"
         android:name="com.smartAttendance.lecturer.LecturePaused"
         android:label="fragment_lecture_paused"
-        tools:layout="@layout/fragment_lecture_paused">
+        tools:layout="@layout/lecturer_class_paused">
         <action
             android:id="@+id/action_lecturePaused_to_leturerStart"
             app:destination="@id/leturerStart" />
@@ -84,7 +84,7 @@
         android:id="@+id/classLeaved"
         android:name="com.smartAttendance.student.ClassLeaved"
         android:label="fragment_class_leaved"
-        tools:layout="@layout/fragment_class_leaved">
+        tools:layout="@layout/student_class_left">
         <action
             android:id="@+id/action_classLeaved_to_studentLogged"
             app:destination="@id/studentLogged" />

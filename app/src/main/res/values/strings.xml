@@ -4,7 +4,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lecturer">Lecturer</string>
     <string name="login">Login</string>
-    <string name="smart_attendance">Smart Attendance</string>
     <string name="student">Student</string>
     <string name="todo">TODO</string>
     <string name="start">Start</string>
@@ -17,4 +16,8 @@
     <string name="_1">1</string>
     <string name="_2">2</string>
     <string name="smart_attendance">Smart Attendance</string>
+
+    <color name="background_color">#393b57</color>
+    <color name="button_color_main">#395751</color>
+    <color name="button_color_secondary">#574e39</color>
 </resources>

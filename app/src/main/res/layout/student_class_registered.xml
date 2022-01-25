@@ -4,95 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     tools:context="com.smartAttendance.student.StudentStart">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="407dp"
-        android:layout_height="731dp"
-        android:background="#fffeaa0c"
-        android:contentDescription="@string/todo"
-        android:scaleType="centerInside"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/menu_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="560dp"
         android:text="@string/smart_attendance"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="20sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView" />
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="144dp" />
 
     <TextView
-        android:id="@+id/User"
+        android:id="@+id/menu_user_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="632dp"
         android:text="@string/student_menu"
         android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"></TextView>
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="72dp"></TextView>
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="73dp"
         android:layout_height="72dp"
-        android:layout_marginStart="167dp"
-        android:layout_marginTop="505dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="505dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="245dp"
         android:layout_height="68dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="613dp"
         android:text="@string/you_are_attending_the_lecture"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="613dp" />
 
     <Button
         android:id="@+id/LeaveLecture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="412dp"
         android:text="Geofence detected"
         android:visibility="visible"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="412dp"
         tools:visibility="visible" />
 
     <Button
         android:id="@+id/EndClass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="412dp"
         android:text="End Class"
         android:visibility="visible"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="412dp"
         tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

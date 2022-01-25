@@ -18,7 +18,7 @@ class ClassLeaved : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_class_leaved, container, false)
+        return inflater.inflate(R.layout.student_class_left, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -19,7 +19,7 @@ class StudentStart : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_student_start, container, false)
+        return inflater.inflate(R.layout.student_class_registered, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

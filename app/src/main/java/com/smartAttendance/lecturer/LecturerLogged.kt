@@ -18,7 +18,7 @@ class LecturerLogged : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lecturer_logged, container, false)
+        return inflater.inflate(R.layout.lecturer_main, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
