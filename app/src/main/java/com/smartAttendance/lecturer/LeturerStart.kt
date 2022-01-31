@@ -19,7 +19,7 @@ class LeturerStart : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.lecturer_class_start, container, false)
+        return inflater.inflate(R.layout.lecturer_class_attending, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

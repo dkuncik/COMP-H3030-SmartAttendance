@@ -47,7 +47,7 @@
         android:id="@+id/leturerStart"
         android:name="com.smartAttendance.lecturer.LeturerStart"
         android:label="fragment_leturer_start"
-        tools:layout="@layout/lecturer_class_start">
+        tools:layout="@layout/lecturer_class_attending">
 
         <action
             android:id="@+id/action_leturerStart_to_lecturePaused"
