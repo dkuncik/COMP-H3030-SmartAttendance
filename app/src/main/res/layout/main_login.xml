@@ -9,73 +9,74 @@
     tools:context="com.smartAttendance.Login">
 
     <TextView
-        android:id="@+id/studentClass_Attending_Submenu"
+        android:id="@+id/main_Login_Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
+        android:layout_marginStart="147dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="145dp"
-        android:text="Login"
-        android:textAlignment="center"
-        android:textAllCaps="false"
+        android:layout_marginEnd="147dp"
+        android:text="@string/login"
+        android:textAllCaps="true"
         android:textColor="@android:color/white"
-        android:textSize="36sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:textAllCaps="true" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/studentID"
+        android:id="@+id/main_Login_StudentID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="57dp"
         android:backgroundTint="@android:color/white"
         android:ems="10"
+        android:hint="@string/student_id_or_lecturer_id"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:text="Student ID"
-        android:textAlignment="center"
+        android:text="@string/student_id"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_Submenu" />
+        app:layout_constraintTop_toBottomOf="@+id/main_Login_Header" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/main_Login_Password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="57dp"
         android:backgroundTint="@android:color/white"
         android:ems="10"
+        android:hint="@string/your_password_here"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
-        android:text="Password"
-        android:textAlignment="center"
+        android:text="@string/password"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentID" />
+        app:layout_constraintTop_toBottomOf="@+id/main_Login_StudentID" />
 
     <Button
-        android:id="@+id/login_Button"
+        android:id="@+id/main_Login_Login"
         android:layout_width="270dp"
         android:layout_height="100dp"
         android:layout_marginStart="61dp"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="62dp"
         android:layout_marginEnd="62dp"
         android:backgroundTint="@color/button_color_green"
-        android:text="Login"
+        android:text="@string/login"
+        android:textColor="@android:color/white"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/main_Login_Password"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
