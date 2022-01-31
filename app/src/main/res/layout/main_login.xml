@@ -8,55 +8,74 @@
     android:background="@color/background_color"
     tools:context="com.smartAttendance.Login">
 
-
     <TextView
-        android:id="@+id/menu_Header"
+        android:id="@+id/studentMain_Submenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/smart_attendance"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="145dp"
+        android:text="Login"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="144dp" />
-
-
-    <Button
-        android:id="@+id/LecturerBTN"
-        android:layout_width="253dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="72dp"
-        android:text="@string/lecturer"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck"
-        tools:layout_editor_absoluteY="343dp"></Button>
-
-    <TextView
-        android:id="@+id/menu_userType_Student"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="228dp"></TextView>
-
-    <Button
-        android:id="@+id/studentLogged"
-        android:layout_width="253dp"
-        android:layout_height="48dp"
-        android:text="@string/student"
-        android:textColor="#FBC02D"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.617"
-        tools:ignore="TextContrastCheck"></Button>
+        tools:textAllCaps="true" />
 
+    <EditText
+        android:id="@+id/studentID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="57dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Student ID"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentMain_Submenu" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="57dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="Password"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentID" />
+
+    <Button
+        android:id="@+id/login_Button"
+        android:layout_width="270dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="62dp"
+        android:backgroundTint="@color/button_color_main"
+        android:text="Login"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,7 +33,7 @@
         android:id="@+id/studentLogged"
         android:name="com.smartAttendance.student.StudentLogged"
         android:label="fragment_student_logged"
-        tools:layout="@layout/student_main">
+        tools:layout="@layout/studentMain">
 
 
         <action

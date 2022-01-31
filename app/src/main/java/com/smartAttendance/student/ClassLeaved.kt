@@ -25,7 +25,7 @@ class ClassLeaved : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
         view.findViewById<Button>(R.id.EnterAgain).setOnClickListener(this)
-        view.findViewById<Button>(R.id.TimeOut).setOnClickListener(this)
+        view.findViewById<Button>(R.id.leaveClass).setOnClickListener(this)
 
 
     }
@@ -33,7 +33,7 @@ class ClassLeaved : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.EnterAgain -> navController!!.navigate(R.id.action_classLeaved_to_studentStart)
-            R.id.TimeOut -> navController!!.navigate(R.id.action_classLeaved_to_studentLogged)
+            R.id.leaveClass -> navController!!.navigate(R.id.action_classLeaved_to_studentLogged)
         }
 
     }

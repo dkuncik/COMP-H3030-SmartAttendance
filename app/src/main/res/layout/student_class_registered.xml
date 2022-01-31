@@ -8,7 +8,7 @@
     tools:context="com.smartAttendance.student.StudentStart">
 
     <TextView
-        android:id="@+id/menu_userType_Student"
+        android:id="@+id/studentMain_Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="117dp"
@@ -19,14 +19,14 @@
         android:textColor="@color/white"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/menu_Header"
+        app:layout_constraintBottom_toTopOf="@+id/studentMain_Submenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></TextView>
 
     <TextView
-        android:id="@+id/menu_Header"
+        android:id="@+id/studentMain_Submenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="57dp"
@@ -41,7 +41,7 @@
         app:layout_constraintBottom_toTopOf="@+id/geoFence_active"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_userType_Student" />
+        app:layout_constraintTop_toBottomOf="@+id/studentMain_Header" />
 
     <Button
         android:id="@+id/geoFence_active"
@@ -57,7 +57,7 @@
         app:layout_constraintBottom_toTopOf="@+id/class_Info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_Header" />
+        app:layout_constraintTop_toBottomOf="@+id/studentMain_Submenu" />
 
     <Button
         android:id="@+id/class_Info"
@@ -84,13 +84,13 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/studen_classStatus"
+        app:layout_constraintBottom_toTopOf="@+id/student_classStatus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/class_Info" />
 
     <TextView
-        android:id="@+id/studen_classStatus"
+        android:id="@+id/student_classStatus"
         android:layout_width="245dp"
         android:layout_height="68dp"
         android:layout_marginStart="74dp"

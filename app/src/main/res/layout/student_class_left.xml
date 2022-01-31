@@ -8,76 +8,117 @@
     tools:context="com.smartAttendance.student.ClassLeaved">
 
     <TextView
-        android:id="@+id/menu_Header"
+        android:id="@+id/studentMain_Submenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/smart_attendance"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="99dp"
+        android:text="@string/leaving_class"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="264dp" />
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentMain_Header" />
 
     <TextView
-        android:id="@+id/menu_userType_Student"
+        android:id="@+id/studentMain_Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/student_menu"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="45dp"
+        android:text="@string/student"
+        android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="192dp"></TextView>
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/studentMain_Submenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
 
     <TextView
-        android:id="@+id/studen_classStatus"
+        android:id="@+id/student_classStatus"
         android:layout_width="245dp"
         android:layout_height="68dp"
-        android:text="You left the Lecture"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="141dp"
+        android:text="@string/you_have_left_the_lecture"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="26sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="744dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/returnNotice" />
 
     <Button
         android:id="@+id/EnterAgain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EnterAgain"
+        android:layout_width="270dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="62dp"
+        android:backgroundTint="@color/button_color_main"
+        android:text="@string/enteragain"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="532dp" />
+        app:layout_constraintBottom_toTopOf="@+id/leaveClass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentMain_Submenu" />
 
     <Button
-        android:id="@+id/TimeOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Time out"
+        android:id="@+id/leaveClass"
+        android:layout_width="270dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="62dp"
+        android:backgroundTint="@color/button_color_secondary"
+        android:text="Leave Class"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="226dp"
-        tools:layout_editor_absoluteY="532dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnterAgain" />
 
     <ProgressBar
-        android:id="@+id/progressBar2"
+        android:id="@+id/returnProgBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="276dp"
         android:layout_height="59dp"
-        android:max="50"
-        android:progress="5"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="604dp" />
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="59dp"
+        android:max="15"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leaveClass" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/returnNotice"
         android:layout_width="257dp"
         android:layout_height="58dp"
-        android:text="You Have 13:33 min to enter the Lecture again"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="68dp"
+        android:text="@string/please_return_before_15_minutes_pass"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="672dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/returnProgBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,22 +19,22 @@ class StudentLogged : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.student_main, container, false)
+        return inflater.inflate(R.layout.studentMain, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        view.findViewById<Button>(R.id.student_AttendClass).setOnClickListener(this)
-        view.findViewById<Button>(R.id.student_Settings).setOnClickListener(this)
+        view.findViewById<Button>(R.id.studentMain_ScanTag).setOnClickListener(this)
+        view.findViewById<Button>(R.id.studentMain_Settings).setOnClickListener(this)
 
 
     }
 
     override fun onClick(v: View?) {
         when (v!!.id) {
-            R.id.student_AttendClass -> navController!!.navigate(R.id.action_studentLogged_to_studentStart)
-            R.id.student_Settings -> navController!!.navigate(R.id.action_studentLogged_to_login)
+            R.id.studentMain_ScanTag -> navController!!.navigate(R.id.action_studentLogged_to_studentStart)
+            R.id.studentMain_Settings -> navController!!.navigate(R.id.action_studentLogged_to_login)
 
         }
 
