@@ -1,5 +1,6 @@
 <resources>
     <color name="background_color">#393b57</color>
-    <color name="button_color_main">#395751</color>
-    <color name="button_color_secondary">#574e39</color>
+    <color name="button_color_green">#395751</color>
+    <color name="button_color_orange">#574e39</color>
+    <color name="button_color_red">#573c39</color>
 </resources>
