@@ -8,7 +8,7 @@
     tools:context="com.smartAttendance.student.ClassLeaved">
 
     <TextView
-        android:id="@+id/studentMain_Submenu"
+        android:id="@+id/studentClass_Attending_Submenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
@@ -22,10 +22,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentMain_Header" />
+        app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_Header" />
 
     <TextView
-        android:id="@+id/studentMain_Header"
+        android:id="@+id/studentClass_Attending_Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="117dp"
@@ -38,13 +38,13 @@
         android:textColor="@android:color/white"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/studentMain_Submenu"
+        app:layout_constraintBottom_toTopOf="@+id/studentClass_Attending_Submenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></TextView>
 
     <TextView
-        android:id="@+id/student_classStatus"
+        android:id="@+id/studentClass_Attending_ClassStatus"
         android:layout_width="245dp"
         android:layout_height="68dp"
         android:layout_marginStart="74dp"
@@ -75,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentMain_Submenu" />
+        app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_Submenu" />
 
     <Button
         android:id="@+id/leaveClass"

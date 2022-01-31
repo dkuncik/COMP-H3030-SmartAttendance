@@ -19,22 +19,22 @@ class StudentStart : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.student_class_registered, container, false)
+        return inflater.inflate(R.layout.student_class_attending, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        view.findViewById<Button>(R.id.class_Info).setOnClickListener(this)
-        view.findViewById<Button>(R.id.geoFence_active).setOnClickListener(this)
+        view.findViewById<Button>(R.id.studentClass_Attending_ClassInfo).setOnClickListener(this)
+        view.findViewById<Button>(R.id.studentClass_Attending_GeoFenceActive).setOnClickListener(this)
 
 
     }
 
     override fun onClick(v: View?) {
         when (v!!.id) {
-            R.id.class_Info -> navController!!.navigate(R.id.action_studentStart_to_studentLogged)
-            R.id.geoFence_active -> navController!!.navigate(R.id.action_studentStart_to_classLeaved)
+            R.id.studentClass_Attending_ClassInfo -> navController!!.navigate(R.id.action_studentStart_to_studentLogged)
+            R.id.studentClass_Attending_GeoFenceActive -> navController!!.navigate(R.id.action_studentStart_to_classLeaved)
         }
 
     }

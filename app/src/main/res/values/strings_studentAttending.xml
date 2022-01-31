@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="in_class">In class</string>
+    <string name="geofemce_active">GeoFemce Active</string>
+    <string name="class_information">Class Information</string>
+    <string name="attending_class">Attending class...</string>
+</resources>
