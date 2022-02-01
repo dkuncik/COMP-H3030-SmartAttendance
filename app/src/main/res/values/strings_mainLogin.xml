@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="login">Login</string>
-    <string name="password">Password</string>
-    <string name="student_id">Student ID/Lecturer ID</string>
-    <string name="your_password_here">Your password here.</string>
-    <string name="student_id_or_lecturer_id">Student ID or Lecturer ID</string>
-</resources>

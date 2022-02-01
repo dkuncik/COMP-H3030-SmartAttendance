@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="lecturer">Lecturer</string>
-    <string name="in_class">In Class</string>
-    <string name="resume_class">Resume Class</string>
-    <string name="end_class">End Class</string>
-    <string name="you_have_paused_the_class_n_nplease_resume_or_end_the_class">You have paused the class... \n\nPlease resume or end the class.</string>
-</resources>

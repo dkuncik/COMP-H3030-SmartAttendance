@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="lecturer">Lecturer</string>
-    <string name="pause_class">Pause Class</string>
-    <string name="stop_class">Stop Class</string>
-    <string name="class_in_session">Class in session...</string>
-    <string name="in_class">In Class</string>
-</resources>
