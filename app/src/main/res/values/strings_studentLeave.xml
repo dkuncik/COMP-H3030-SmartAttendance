@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="studentLeaving">Student</string>
+    <string name="geofence_inactive">GeoFence Inactive</string>
+    <string name="please_return_to_class">Please return to class...</string>
+    <string name="terminate_session">Terminate Session</string>
+    <string name="studentLeaving_in_class">Class</string>
+</resources>

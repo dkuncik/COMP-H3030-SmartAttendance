@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">Login</string>
+    <string name="your_password_here">Password</string>
+    <string name="student_id_or_lecturer_id">Student ID/Lecturer ID</string>
+</resources>

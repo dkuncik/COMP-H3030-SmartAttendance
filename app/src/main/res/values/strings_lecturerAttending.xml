@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lecturerAttending_Header">Lecturer</string>
+    <string name="lecturerAttending_pause_class">Pause Class</string>
+    <string name="lecturerAttending_stop_class">Stop Class</string>
+    <string name="lecturerAttending_class_in_session">Class in session…</string>
+    <string name="lecturerAttending_in_class">In Class</string>
+</resources>

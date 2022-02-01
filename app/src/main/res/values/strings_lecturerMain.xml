@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lecturerMain_Header">Lecturer</string>
+    <string name="lecturerMain_main_menu">Main Menu</string>
+    <string name="lecturerMain_start_class">Start Class</string>
+    <string name="lecturerMain_timetable">Timetable</string>
+    <string name="lecturerMain_settings">Settings</string>
+</resources>

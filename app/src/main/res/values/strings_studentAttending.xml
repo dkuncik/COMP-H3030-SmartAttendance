@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="studentAttending_in_class">Class</string>
+    <string name="geofence_active">GeoFence Active</string>
+    <string name="class_information">Class Information</string>
+    <string name="attending_class">Attending class...</string>
+    <string name="studentAttending_Header">Student</string>
+</resources>
