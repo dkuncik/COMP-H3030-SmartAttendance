@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartAttendance">
         <activity
-            android:name="com.example.smartattendance.MainActivity"
+            android:name="com.example.smartattendance.Login"
             android:exported="true"
             tools:ignore="WrongManifestParent">
             <intent-filter>

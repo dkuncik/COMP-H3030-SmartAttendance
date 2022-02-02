@@ -70,6 +70,7 @@
         android:layout_marginTop="62dp"
         android:layout_marginEnd="62dp"
         android:backgroundTint="@color/button_color_green"
+        android:onClick="login"
         android:text="@string/login"
         android:textColor="@android:color/white"
         android:textSize="24sp"
