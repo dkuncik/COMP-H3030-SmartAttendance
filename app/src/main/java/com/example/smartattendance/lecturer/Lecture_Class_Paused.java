@@ -9,24 +9,31 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.smartattendance.R;
 
-public class Lecture_Class_Attending extends AppCompatActivity {
+public class Lecture_Class_Paused extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lecturer_class_attending);
+        setContentView(R.layout.lecturer_class_paused);
 
-        Button pause = findViewById(R.id.lecturerClass_Attending_Pause);
-        Button end = findViewById(R.id.lecturerClass_Attending_Stop);
+        Button resume = findViewById(R.id.lecturerClass_Attending_Paused_Resume);
+        Button end = findViewById(R.id.lecturerClass_Attending_Paused_End);
 
-        pause.setOnClickListener(view -> openActivity(Lecture_Class_Paused.class));
+        resume.setOnClickListener(view -> {
+            openActivity(Lecture_Class_Attending.class);
+            finish();
+        });
         end.setOnClickListener(view -> {
             openActivity(Lecturer_Main.class);
             finish();
         });
     }
+
+    @Override
+    public void onBackPressed() {
+    }
+
     public void openActivity(Class activity) {
         Intent intent = new Intent(this, activity);
         startActivity(intent);
     }
-
 }

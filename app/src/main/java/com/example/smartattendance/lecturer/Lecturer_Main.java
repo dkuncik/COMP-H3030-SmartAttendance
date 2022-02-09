@@ -17,11 +17,9 @@ public class Lecturer_Main extends AppCompatActivity {
         setContentView(R.layout.lecturer_main);
 
         Button start = findViewById(R.id.lecturerMainMenu_Start);
-        Button timetable = findViewById(R.id.lecturerMainMenu_Timetable);
         Button settings = findViewById(R.id.lecturerMainMenu_Settings);
 
         start.setOnClickListener(view -> openActivity(Lecture_Class_Attending.class));
-//        timetable.setOnClickListener(view -> openActivity());
         settings.setOnClickListener(view -> openActivity(Lecture_Settings.class));
 
     }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lecturer_header">Lecturer</string>
+    <string name="lecturer_settings_submenu">Settings</string>
+    <string name="lecturer_settings_logout">Logout</string>
+</resources>

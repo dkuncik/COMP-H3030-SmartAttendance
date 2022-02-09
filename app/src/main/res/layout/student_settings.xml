@@ -43,12 +43,10 @@
         android:layout_height="100dp"
         android:layout_marginStart="61dp"
         android:layout_marginTop="64dp"
-        android:layout_marginBottom="593dp"
         android:backgroundTint="@color/button_color_red"
         android:text="@string/studentsettings_logout"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/student_Settings_Submenu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

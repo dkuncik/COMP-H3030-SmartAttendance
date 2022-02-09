@@ -24,6 +24,7 @@
         <activity android:name=".student.Student_Main" />
         <activity android:name=".lecturer.Lecture_Class_Attending"/>
         <activity android:name=".student.Student_Class_Attending"/>
+        <activity android:name=".lecturer.Lecture_Class_Paused"/>
         <activity android:name=".lecturer.Lecture_Settings" />
         <activity android:name=".student.Student_Settings" />
     </application>

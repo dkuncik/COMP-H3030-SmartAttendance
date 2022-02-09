@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".lecturer.Lecture_Class_Attending">
+    tools:context="com.example.smartattendance.lecturer.Lecture_Class_Attending">
 
     <TextView
         android:id="@+id/lecturerClass_Attending_Header"
