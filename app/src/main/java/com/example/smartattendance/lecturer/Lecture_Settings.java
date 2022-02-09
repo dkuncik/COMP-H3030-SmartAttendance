@@ -21,7 +21,6 @@ public class Lecture_Settings extends AppCompatActivity {
             openActivity(Login.class);
             finish();
         });
-
     }
     public void openActivity(Class activity) {
         Intent intent = new Intent(this, activity);

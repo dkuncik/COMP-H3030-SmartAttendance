@@ -17,7 +17,10 @@ public class Student_Settings extends AppCompatActivity {
         setContentView(R.layout.student_settings);
 
         Button logout = findViewById(R.id.student_Settings_Logout);
-        logout.setOnClickListener(view -> openActivity(Login.class));
+        logout.setOnClickListener(view -> {
+            openActivity(Login.class);
+            finish();
+        });
     }
     public void openActivity(Class activity) {
         Intent intent = new Intent(this, activity);

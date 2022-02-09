@@ -17,11 +17,11 @@ public class Student_Main extends AppCompatActivity {
         setContentView(R.layout.student_main);
 
         Button start = findViewById(R.id.studentMainMenu_ScanTag);
-        Button timetable = findViewById(R.id.studentMainMenu_Timetable);
         Button settings = findViewById(R.id.studentMainMenu_Settings);
 
-        start.setOnClickListener(view -> openActivity(Student_Class_Attending.class));
-//        timetable.setOnClickListener(view -> openActivity());
+        start.setOnClickListener(view -> {
+            // Mihai add the NFC things here to ask for scanning
+        });
         settings.setOnClickListener(view -> openActivity(Student_Settings.class));
     }
     public void openActivity(Class activity) {

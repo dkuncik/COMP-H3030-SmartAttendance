@@ -21,7 +21,6 @@ public class Lecturer_Main extends AppCompatActivity {
 
         start.setOnClickListener(view -> openActivity(Lecture_Class_Attending.class));
         settings.setOnClickListener(view -> openActivity(Lecture_Settings.class));
-
     }
     public void openActivity(Class activity) {
         Intent intent = new Intent(this, activity);
