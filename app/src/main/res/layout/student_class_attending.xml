@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context="com.smartAttendance.student.StudentStart">
+    tools:context=".student.Student_Class_Attending">
 
     <TextView
         android:id="@+id/studentClass_Attending_Header"
@@ -21,7 +21,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/studentClass_Attending_Submenu"
@@ -45,14 +45,12 @@
         android:layout_height="100dp"
         android:layout_marginStart="61dp"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="62dp"
         android:backgroundTint="@color/button_color_green"
         android:text="@string/geofence_active"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_Submenu" />
 
@@ -62,14 +60,12 @@
         android:layout_height="100dp"
         android:layout_marginStart="61dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="62dp"
         android:backgroundTint="@color/button_color_green"
         android:text="@string/class_information"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_GeoFenceActive" />
 
@@ -78,12 +74,9 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="270dp"
         android:layout_height="100dp"
-        android:layout_marginStart="160dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="75dp"
-        android:layout_marginEnd="160dp"
         android:indeterminate="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_ClassInfo" />
 
@@ -91,9 +84,8 @@
         android:id="@+id/studentClass_Attending_ClassStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
+        android:layout_marginStart="92dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="74dp"
         android:layout_marginBottom="211dp"
         android:text="@string/attending_class"
         android:textAlignment="center"
@@ -101,9 +93,8 @@
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_ProgressBar" />
+        app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_ProgressBar"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

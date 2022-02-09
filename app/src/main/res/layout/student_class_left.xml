@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_color"
-    tools:context="com.smartAttendance.student.ClassLeaved">
+    android:background="@color/background_color">
 
     <TextView
         android:id="@+id/studentClass_Leave_Header"
@@ -43,12 +42,10 @@
         android:layout_height="100dp"
         android:layout_marginStart="61dp"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="62dp"
         android:backgroundTint="@color/button_color_orange"
         android:text="@string/geofence_inactive"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentClass_Leave_Submenu"
         tools:textColor="@android:color/white" />
@@ -59,13 +56,10 @@
         android:layout_height="100dp"
         android:layout_marginStart="61dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="62dp"
         android:backgroundTint="@color/button_color_red"
         android:text="@string/terminate_session"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentClass_Leave_GeoFenceInactive"
         tools:textColor="@android:color/white" />
@@ -77,10 +71,8 @@
         android:layout_height="50dp"
         android:layout_marginStart="61dp"
         android:layout_marginTop="75dp"
-        android:layout_marginEnd="62dp"
         android:max="20"
         android:progress="0"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentClass_Leave_Terminate" />
 
@@ -90,15 +82,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="69dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="70dp"
         android:layout_marginBottom="276dp"
         android:text="@string/please_return_to_class"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentClass_Leave_ProgressBar" />
 
