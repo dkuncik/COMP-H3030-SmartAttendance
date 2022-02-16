@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mihai/Documents/GitHub/Smart-Attendance/app/src/main/res/layout/lecturer_class_paused.xml" value="0.16621376811594202" />
+        <entry key="..\:/Users/mihai/Documents/GitHub/Smart-Attendance/app/src/main/res/layout/lecturer_main.xml" value="0.16621376811594202" />
+        <entry key="..\:/Users/mihai/Documents/GitHub/Smart-Attendance/app/src/main/res/layout/student_class_attending.xml" value="0.16945288753799392" />
+        <entry key="..\:/Users/mihai/Documents/GitHub/Smart-Attendance/app/src/main/res/xml/nfc_tech_filter.xml" value="0.1" />
         <entry key="..\:/Users/super/AndroidStudioProjects/SmartAttendance/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/super/AndroidStudioProjects/SmartAttendance/app/src/main/res/layout/main_login.xml" value="0.2375" />
         <entry key="..\:/Users/super/AndroidStudioProjects/SmartAttendance/app/src/main/res/layout/student_class_attending.xml" value="0.10989583333333333" />

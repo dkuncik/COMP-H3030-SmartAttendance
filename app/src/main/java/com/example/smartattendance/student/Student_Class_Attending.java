@@ -1,5 +1,8 @@
 package com.example.smartattendance.student;
 
+import android.app.Activity;
+import android.nfc.NfcAdapter;
+import android.nfc.Tag;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
