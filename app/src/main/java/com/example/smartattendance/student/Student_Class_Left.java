@@ -15,6 +15,6 @@ public class Student_Class_Left extends AppCompatActivity {
         setContentView(R.layout.student_class_attending);
 
         Button end = findViewById(R.id.studentClass_Leave_Terminate);
-        
+
     }
 }
