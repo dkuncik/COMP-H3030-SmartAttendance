@@ -22,6 +22,7 @@ public class Student_Settings extends AppCompatActivity {
             finish();
         });
     }
+
     public void openActivity(Class activity) {
         Intent intent = new Intent(this, activity);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

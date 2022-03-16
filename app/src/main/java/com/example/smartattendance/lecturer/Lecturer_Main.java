@@ -2,7 +2,6 @@ package com.example.smartattendance.lecturer;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import androidx.annotation.Nullable;
@@ -22,6 +21,7 @@ public class Lecturer_Main extends AppCompatActivity {
         start.setOnClickListener(view -> openActivity(Lecture_Class_Attending.class));
         settings.setOnClickListener(view -> openActivity(Lecture_Settings.class));
     }
+
     public void openActivity(Class activity) {
         Intent intent = new Intent(this, activity);
         startActivity(intent);

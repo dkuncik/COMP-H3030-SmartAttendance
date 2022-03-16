@@ -24,6 +24,7 @@ public class Lecture_Class_Attending extends AppCompatActivity {
             finish();
         });
     }
+
     public void openActivity(Class activity) {
         Intent intent = new Intent(this, activity);
         startActivity(intent);
