@@ -3,13 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.smartattendance">
 
-<<<<<<< Updated upstream
-=======
+
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
 
->>>>>>> Stashed changes
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,13 +20,11 @@
             android:exported="true"
             tools:ignore="WrongManifestParent">
             <intent-filter>
-<<<<<<< Updated upstream
-=======
+
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="text/plain" />
 
->>>>>>> Stashed changes
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.nfc.action.TECH_DISCOVERED" />
 
@@ -38,12 +34,7 @@
                 android:name="android.nfc.action.TECH_DISCOVERED"
                 android:resource="@xml/nfc_tech_filter" />
         </activity>
-        <intent-filter>
-            <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
-            <category android:name="android.intent.category.DEFAULT"/>
-            <data android:mimeType="text/plain" />
-        </intent-filter>
-        <user-permission android:name="android.permission.NFC" />
+
         <activity android:name=".lecturer.Lecturer_Main" />
         <activity android:name=".student.Student_Main" />
         <activity android:name=".lecturer.Lecture_Class_Attending" />
