@@ -11,7 +11,7 @@ public class Student_Class_Attending extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lecturer_class_attending);
+        setContentView(R.layout.student_class_attending);
 
         // Mihai do your geo-fence things here
     }
