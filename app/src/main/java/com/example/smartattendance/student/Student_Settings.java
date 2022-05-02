@@ -7,7 +7,7 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.smartattendance.Login;
+
 import com.example.smartattendance.R;
 
 public class Student_Settings extends AppCompatActivity {
