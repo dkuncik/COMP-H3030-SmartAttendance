@@ -12,9 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
@@ -26,16 +24,10 @@ import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-
 public class Student_Main extends AppCompatActivity {
     NfcAdapter nfcAdapter;
     Button ReadBtt;
-    EditText textTag;
-    String[] values = {"E042","E043","LT1","LT2","LT3"};
+    String[] values = {"E042", "E043", "LT1", "LT2", "LT3"};
 
 
     @Override
@@ -56,10 +48,10 @@ public class Student_Main extends AppCompatActivity {
 
         Button settings = findViewById(R.id.studentMainMenu_Settings);
         Button timetable = findViewById(R.id.studentMainMenu_Timetable);
-        Intent intent3 = new Intent(Student_Main.this ,Student_Class_Attending.class);
+        Intent intent3 = new Intent(Student_Main.this, Student_Class_Attending.class);
 
         ReadBtt.setOnClickListener(view -> openActivity(Student_Class_Attending.class));
-        settings.setOnClickListener(view ->  openActivity(Student_Settings.class));
+        settings.setOnClickListener(view -> openActivity(Student_Settings.class));
 
 
     }
@@ -79,11 +71,6 @@ public class Student_Main extends AppCompatActivity {
             alert.show();
         }
     }
-
-
-
-
-
 
 
     @Override
@@ -106,6 +93,7 @@ public class Student_Main extends AppCompatActivity {
 
         super.onPause();
     }
+
     public String getTextFromNdefRecord(NdefRecord ndefRecord) {
         String insideTag = null;
         try {
@@ -154,10 +142,10 @@ public class Student_Main extends AppCompatActivity {
     }
 
 
-        public void openActivity(Class activity) {
-            Intent intent = new Intent(this, activity);
-            startActivity(intent);
-        }
+    public void openActivity(Class activity) {
+        Intent intent = new Intent(this, activity);
+        startActivity(intent);
+    }
 
 
 }

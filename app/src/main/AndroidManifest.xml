@@ -5,20 +5,21 @@
 
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="false" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SmartAttendance">
+        android:theme="@style/Theme.SmartAttendance"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name="com.example.smartattendance.student.Login"
+            android:name="com.example.smartattendance.student.Student_Class_Attending"
             android:exported="true"
             tools:ignore="WrongManifestParent">
             <intent-filter>
@@ -30,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".student.Student_Main" />
-        <activity android:name=".student.Student_Class_Attending" />
+        <!--        <activity android:name=".student.Student_Class_Attending" />-->
         <activity android:name=".student.Student_Class_Left" />
         <activity android:name=".student.Student_Settings" />
     </application>

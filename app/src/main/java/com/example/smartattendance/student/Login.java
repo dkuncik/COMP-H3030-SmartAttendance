@@ -14,10 +14,9 @@ import com.example.smartattendance.R;
 
 
 public class Login extends AppCompatActivity {
-    private EditText username, password;
-
     String GoodUsername = "s";
     String GoodPassword = "s";
+    private EditText username, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,36 +31,35 @@ public class Login extends AppCompatActivity {
         password = findViewById(R.id.main_Login_Password);
         SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
         String checkbox = preferences.getString("remember", "");
-        if (checkbox.equals("true")){
-            Intent intent = new Intent(Login.this,Student_Main.class);
+        if (checkbox.equals("true")) {
+            Intent intent = new Intent(Login.this, Student_Main.class);
             startActivity(intent);
-        }
-        else if(!checkbox.equals("false")){
-           Toast.makeText(this,"Please Sign in ",Toast.LENGTH_SHORT).show();
+        } else if (!checkbox.equals("false")) {
+            Toast.makeText(this, "Please Sign in ", Toast.LENGTH_SHORT).show();
         }
 
 
         login.setOnClickListener(view -> {
 
             if (username.getText().toString().trim().equals(GoodUsername) && password.getText().toString().trim().equals(GoodPassword)) {
-                Intent intent2 = new Intent(Login.this ,Student_Main.class);
+                Intent intent2 = new Intent(Login.this, Student_Main.class);
                 startActivity(intent2);
             } else {
                 Toast.makeText(getApplicationContext(), "Incorrect ID or PASSWORD", Toast.LENGTH_SHORT).show();
-            }            });
+            }
+        });
 
 
         remember.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (compoundButton.isChecked()){
-                SharedPreferences preferences1 = getSharedPreferences("checkbox",MODE_PRIVATE);
+            if (compoundButton.isChecked()) {
+                SharedPreferences preferences1 = getSharedPreferences("checkbox", MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences1.edit();
-                editor.putString("remember","true");
+                editor.putString("remember", "true");
                 editor.apply();
-            }
-            else if (!compoundButton.isChecked()) {
-                SharedPreferences preferences1 = getSharedPreferences("checkbox",MODE_PRIVATE);
+            } else if (!compoundButton.isChecked()) {
+                SharedPreferences preferences1 = getSharedPreferences("checkbox", MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences1.edit();
-                editor.putString("remember","false");
+                editor.putString("remember", "false");
                 editor.apply();
 
             }
