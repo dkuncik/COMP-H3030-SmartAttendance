@@ -16,6 +16,8 @@ import com.example.smartattendance.R;
 public class Login extends AppCompatActivity {
     private EditText username, password;
 
+    String GoodUsername = "s";
+    String GoodPassword = "s";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +43,9 @@ public class Login extends AppCompatActivity {
 
         login.setOnClickListener(view -> {
 
-            if (username.getText().toString().equals("s") && password.getText().toString().equals("s")) {
-                Intent intent = new Intent(Login.this ,Student_Main.class);
-                startActivity(intent);
+            if (username.getText().toString().trim().equals(GoodUsername) && password.getText().toString().trim().equals(GoodPassword)) {
+                Intent intent2 = new Intent(Login.this ,Student_Main.class);
+                startActivity(intent2);
             } else {
                 Toast.makeText(getApplicationContext(), "Incorrect ID or PASSWORD", Toast.LENGTH_SHORT).show();
             }            });
@@ -63,6 +65,7 @@ public class Login extends AppCompatActivity {
                 editor.apply();
 
             }
+
         });
     }
 

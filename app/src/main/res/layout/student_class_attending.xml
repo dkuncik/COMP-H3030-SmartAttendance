@@ -4,16 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_color"
-    tools:context=".student.Student_Class_Attending">
+    android:background="@color/background_color">
 
     <TextView
-        android:id="@+id/studentClass_Attending_Header"
+        android:id="@+id/studentClass_Leave_Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="121dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="121dp"
         android:text="@string/studentAttending_Header"
         android:textAllCaps="true"
         android:textColor="@android:color/white"
@@ -24,77 +21,56 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/studentClass_Attending_Submenu"
+        android:id="@+id/studentClass_Leave_Submenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="155dp"
-        android:layout_marginEnd="156dp"
         android:text="@string/lecturerAttending_in_class"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_Header" />
+        app:layout_constraintTop_toBottomOf="@+id/studentClass_Leave_Header" />
 
     <Button
-        android:id="@+id/studentClass_Attending_GeoFenceActive"
-        android:layout_width="270dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="64dp"
-        android:backgroundTint="@color/button_color_green"
-        android:text="@string/geofence_active"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
+        android:id="@+id/Click_Present"
+        android:layout_width="272dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="192dp"
+        android:backgroundTint="@color/button_color_orange"
+        android:text="@string/present"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_Submenu" />
+        app:layout_constraintTop_toBottomOf="@+id/studentClass_Leave_Submenu"
+        tools:textColor="@android:color/white" />
 
     <Button
-        android:id="@+id/studentClass_Attending_ClassInfo"
-        android:layout_width="270dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="36dp"
-        android:backgroundTint="@color/button_color_green"
-        android:text="@string/class_information"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
+        android:id="@+id/studentClass_Leave_Terminate"
+        android:layout_width="272dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="@color/button_color_red"
+        android:text="@string/terminate_session"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_GeoFenceActive" />
+        app:layout_constraintTop_toBottomOf="@+id/Click_Present"
+        tools:textColor="@android:color/white" />
 
-    <ProgressBar
-        android:id="@+id/studentClass_Attending_ProgressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="270dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="75dp"
-        android:indeterminate="true"
+    <EditText
+        android:id="@+id/Module_Code"
+        android:layout_width="272dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="67dp"
+        android:ems="10"
+        android:hint="@string/enter_module_code_eg_comp_h3033"
+        android:inputType="textPersonName|text"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_ClassInfo" />
-
-    <TextView
-        android:id="@+id/studentClass_Attending_ClassStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="211dp"
-        android:text="@string/attending_class"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentClass_Attending_ProgressBar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/studentClass_Leave_Submenu"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,9 +11,7 @@
         android:id="@+id/student_Settings_Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="121dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="121dp"
         android:text="@string/studentsettings_sttudent"
         android:textAllCaps="true"
         android:textColor="@android:color/white"
@@ -27,8 +25,6 @@
         android:id="@+id/student_Settings_Submenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="151dp"
-        android:layout_marginEnd="152dp"
         android:text="@string/student_settings_settings"
         android:textColor="@android:color/white"
         android:textSize="24sp"
@@ -39,14 +35,14 @@
 
     <Button
         android:id="@+id/student_Settings_Logout"
-        android:layout_width="270dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="61dp"
+        android:layout_width="272dp"
+        android:layout_height="85dp"
         android:layout_marginTop="64dp"
         android:backgroundTint="@color/button_color_red"
         android:text="@string/studentsettings_logout"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/student_Settings_Submenu" />
 </androidx.constraintlayout.widget.ConstraintLayout>
