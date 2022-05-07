@@ -46,6 +46,7 @@ public class Student_Main extends AppCompatActivity {
         }
 
 
+
         Button settings = findViewById(R.id.studentMainMenu_Settings);
         Button timetable = findViewById(R.id.studentMainMenu_Timetable);
         Intent intent3 = new Intent(Student_Main.this, Student_Class_Attending.class);

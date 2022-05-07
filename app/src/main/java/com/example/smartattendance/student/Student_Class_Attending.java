@@ -1,8 +1,8 @@
 package com.example.smartattendance.student;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,33 +23,41 @@ public class Student_Class_Attending extends AppCompatActivity {
 
     public EditText moduleCode;
     Button sendDatabtn;
-    String username = "hey";
+
     String password3 = "boss";
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_class_attending);
 
+        SharedPreferences StudentName = getApplicationContext().getSharedPreferences("UserName",MODE_PRIVATE);
+        String UsernameToSend = StudentName.getString("name" ,"");
+
+        Toast.makeText(Student_Class_Attending.this, UsernameToSend, Toast.LENGTH_SHORT).show();
+
 
         moduleCode = findViewById(R.id.Module_Code);
         sendDatabtn = findViewById(R.id.Click_Present);
-        sendDatabtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (moduleCode.getText().toString().isEmpty()) {
-                    Toast.makeText(Student_Class_Attending.this, "Module Code Required", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                sendData();
+
+
+        sendDatabtn.setOnClickListener(view -> {
+            if (moduleCode.getText().toString().isEmpty()) {
+                Toast.makeText(Student_Class_Attending.this, "Module Code Required", Toast.LENGTH_SHORT).show();
+                return;
             }
+
+            sendData(UsernameToSend);
         });
 
 
     }
 
-    private void sendData() {
-        String name = username;
+    public void sendData(String Usernametosend) {
+
         String password = password3;
         String moduleCodes = moduleCode.getText().toString().trim();
 
@@ -69,7 +77,7 @@ public class Student_Class_Attending extends AppCompatActivity {
 
         APIsInterface api = retrofit.create(APIsInterface.class);
 
-        Call<ResponseModel> call = api.sendData(name, password, moduleCodes);
+        Call<ResponseModel> call = api.sendData(Usernametosend, password, moduleCodes);
 
         call.enqueue(new Callback<ResponseModel>() {
             @Override

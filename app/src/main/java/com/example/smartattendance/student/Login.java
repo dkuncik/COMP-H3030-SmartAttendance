@@ -16,10 +16,14 @@ import com.example.smartattendance.R;
 public class Login extends AppCompatActivity {
     String GoodUsername = "s";
     String GoodPassword = "s";
-    private EditText username, password;
+    EditText username, password;
+    String NameToSend;
+    SharedPreferences StudentName;
+
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
 
 
         super.onCreate(savedInstanceState);
@@ -27,8 +31,18 @@ public class Login extends AppCompatActivity {
 
         Button login = findViewById(R.id.main_Login_Login);
         CheckBox remember = findViewById(R.id.rememberMe);
+
+
         username = findViewById(R.id.main_Login_StudentID);
         password = findViewById(R.id.main_Login_Password);
+
+        StudentName = getSharedPreferences("UserName",MODE_PRIVATE);
+
+
+
+
+
+
         SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
         String checkbox = preferences.getString("remember", "");
         if (checkbox.equals("true")) {
@@ -42,8 +56,18 @@ public class Login extends AppCompatActivity {
         login.setOnClickListener(view -> {
 
             if (username.getText().toString().trim().equals(GoodUsername) && password.getText().toString().trim().equals(GoodPassword)) {
+
+                NameToSend = username.getText().toString();
+                SharedPreferences.Editor editor = StudentName.edit();
+                editor.putString("name",NameToSend);
+                editor.apply();
+
+
                 Intent intent2 = new Intent(Login.this, Student_Main.class);
                 startActivity(intent2);
+
+
+
             } else {
                 Toast.makeText(getApplicationContext(), "Incorrect ID or PASSWORD", Toast.LENGTH_SHORT).show();
             }
