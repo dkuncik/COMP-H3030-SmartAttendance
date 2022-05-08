@@ -21,9 +21,9 @@ public class Student_Settings extends AppCompatActivity {
         Button logout = findViewById(R.id.student_Settings_Logout);
         Button GoBack = findViewById(R.id.student_Settings_GoBack);
         logout.setOnClickListener(view -> {
-            SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
+            SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
             SharedPreferences.Editor editor = preferences.edit();
-            editor.putString("remember","false");
+            editor.putString("remember", "false");
             editor.apply();
             openActivity(Login.class);
 

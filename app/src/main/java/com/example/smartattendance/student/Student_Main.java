@@ -2,9 +2,9 @@ package com.example.smartattendance.student;
 
 import android.app.AlertDialog;
 import android.app.PendingIntent;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
@@ -23,7 +23,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.UnsupportedEncodingException;
-import java.util.Arrays;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -34,7 +33,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Student_Main extends AppCompatActivity {
     NfcAdapter nfcAdapter;
-    Button ReadBtt;
+    String NFCtoSEND;
+    SharedPreferences NFCtag;
 
 
 
@@ -43,6 +43,8 @@ public class Student_Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_main);
 
+
+        NFCtag = getSharedPreferences("NFCtags", MODE_PRIVATE);
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
 
@@ -51,7 +53,6 @@ public class Student_Main extends AppCompatActivity {
         } else {
             finish();
         }
-
 
 
         Button settings = findViewById(R.id.studentMainMenu_Settings);
@@ -125,7 +126,6 @@ public class Student_Main extends AppCompatActivity {
             sendData2(insideTag);
 
 
-
         }
     }
 
@@ -136,11 +136,6 @@ public class Student_Main extends AppCompatActivity {
     }
 
     public void sendData2(String insidetag) {
-
-
-        Toast.makeText(this, insidetag, Toast.LENGTH_LONG).show();
-
-
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
@@ -162,14 +157,21 @@ public class Student_Main extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Student_Main.this, R.style.AlertDialogStyle);
                 AlertDialog.Builder builder1 = new AlertDialog.Builder(Student_Main.this, R.style.AlertDialogStyleGood);
                 if (response.isSuccessful()) {
-                    if(responseModel.isStatus()) {
-                    builder1.setMessage("You are Present in" + insidetag)
-                            .setPositiveButton("good", (dialogInterface, i) -> openActivity(Student_Class_Attending.class))
-                            .setNegativeButton("Cancel", null);
-                    AlertDialog alert1 = builder1.create();
-                    alert1.show();
-                    alert1.getWindow().setLayout(900, 900);}
-                    else {
+                    if (responseModel.isStatus()) {
+
+
+                        NFCtoSEND = insidetag;
+                        SharedPreferences.Editor editor = NFCtag.edit();
+                        editor.putString("nfc", NFCtoSEND);
+                        editor.apply();
+
+                        builder1.setMessage("Is this the right class room ? " + insidetag)
+                                .setPositiveButton("Yes", (dialogInterface, i) -> openActivity(Student_Class_Attending.class))
+                                .setNegativeButton("No", null);
+                        AlertDialog alert1 = builder1.create();
+                        alert1.show();
+                        alert1.getWindow().setLayout(900, 900);
+                    } else {
                         builder.setMessage("Not A Classroom")
                                 .setNegativeButton("Cancel", null);
                         AlertDialog alert = builder.create();
@@ -177,8 +179,7 @@ public class Student_Main extends AppCompatActivity {
                         alert.getWindow().setLayout(900, 900);
 
 
-                    }                } else {
-
+                    }
                 }
                 Toast.makeText(Student_Main.this, responseModel.getRemarks(), Toast.LENGTH_SHORT).show();
 

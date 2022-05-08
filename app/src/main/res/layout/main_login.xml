@@ -30,7 +30,7 @@
         android:layout_marginTop="108dp"
         android:backgroundTint="@android:color/white"
         android:ems="10"
-        android:hint="@string/student_id_or_lecturer_id"
+        android:hint="@string/student_id"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textColor="@android:color/white"

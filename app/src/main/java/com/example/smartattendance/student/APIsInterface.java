@@ -10,16 +10,25 @@ public interface APIsInterface {
     //Here we will define the request method for particular php script
 
     @FormUrlEncoded
-    @POST("save_user.php")
+    @POST("log_user.php")
     Call<ResponseModel> sendData(
             @Field("NAME") String name,
-            @Field("PASSWORD") String password,
-            @Field("MODULECODE") String moduleCodes
+            @Field("NFC") String nfc,
+            @Field("MODULECODE") String moduleCodes,
+            @Field("Date&Time") String DateandTimeS
     );
+
     @FormUrlEncoded
-    @POST("getNFC.php")
+    @POST("authenticate_room.php")
     Call<ResponseModel> sendData2(
             @Field("NFC") String insidetag
+
+    );
+    @FormUrlEncoded
+    @POST("authenticate_user.php")
+    Call<ResponseModel> sendDataCredential(
+            @Field("StudentID") String studentID,
+            @Field("StudentPassword") String studentPassword
 
     );
 
