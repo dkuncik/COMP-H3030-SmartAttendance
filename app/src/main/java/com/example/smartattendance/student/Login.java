@@ -21,7 +21,6 @@ public class Login extends AppCompatActivity {
     SharedPreferences StudentName;
 
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -36,11 +35,7 @@ public class Login extends AppCompatActivity {
         username = findViewById(R.id.main_Login_StudentID);
         password = findViewById(R.id.main_Login_Password);
 
-        StudentName = getSharedPreferences("UserName",MODE_PRIVATE);
-
-
-
-
+        StudentName = getSharedPreferences("UserName", MODE_PRIVATE);
 
 
         SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
@@ -59,13 +54,12 @@ public class Login extends AppCompatActivity {
 
                 NameToSend = username.getText().toString();
                 SharedPreferences.Editor editor = StudentName.edit();
-                editor.putString("name",NameToSend);
+                editor.putString("name", NameToSend);
                 editor.apply();
 
 
                 Intent intent2 = new Intent(Login.this, Student_Main.class);
                 startActivity(intent2);
-
 
 
             } else {
