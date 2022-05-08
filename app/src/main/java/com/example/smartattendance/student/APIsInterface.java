@@ -16,6 +16,7 @@ public interface APIsInterface {
             @Field("PASSWORD") String password,
             @Field("MODULECODE") String moduleCodes
     );
+
     @FormUrlEncoded
     @POST("getNFC.php")
     Call<ResponseModel> sendData2(

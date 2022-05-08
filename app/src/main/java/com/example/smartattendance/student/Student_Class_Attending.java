@@ -29,15 +29,13 @@ public class Student_Class_Attending extends AppCompatActivity {
     String password3 = "boss";
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_class_attending);
 
-        SharedPreferences StudentName = getApplicationContext().getSharedPreferences("UserName",MODE_PRIVATE);
-        String UsernameToSend = StudentName.getString("name" ,"");
+        SharedPreferences StudentName = getApplicationContext().getSharedPreferences("UserName", MODE_PRIVATE);
+        String UsernameToSend = StudentName.getString("name", "");
 
         Toast.makeText(Student_Class_Attending.this, UsernameToSend, Toast.LENGTH_SHORT).show();
 
@@ -46,9 +44,9 @@ public class Student_Class_Attending extends AppCompatActivity {
         sendDatabtn = findViewById(R.id.Click_Present);
         goBack = findViewById(R.id.studentClass_Attending_GOback);
 
-        goBack.setOnClickListener(view ->{openActivity(Student_Main.class);});
-
-
+        goBack.setOnClickListener(view -> {
+            openActivity(Student_Main.class);
+        });
 
 
         sendDatabtn.setOnClickListener(view -> {
@@ -110,6 +108,7 @@ public class Student_Class_Attending extends AppCompatActivity {
             }
         });
     }
+
     public void openActivity(Class activity) {
         Intent intent = new Intent(this, activity);
         startActivity(intent);

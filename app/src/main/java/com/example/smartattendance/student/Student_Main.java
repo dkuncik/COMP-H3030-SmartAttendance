@@ -2,7 +2,6 @@ package com.example.smartattendance.student;
 
 import android.app.AlertDialog;
 import android.app.PendingIntent;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.nfc.NdefMessage;
@@ -23,7 +22,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.UnsupportedEncodingException;
-import java.util.Arrays;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,7 +33,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Student_Main extends AppCompatActivity {
     NfcAdapter nfcAdapter;
     Button ReadBtt;
-
 
 
     @Override
@@ -51,7 +48,6 @@ public class Student_Main extends AppCompatActivity {
         } else {
             finish();
         }
-
 
 
         Button settings = findViewById(R.id.studentMainMenu_Settings);
@@ -125,7 +121,6 @@ public class Student_Main extends AppCompatActivity {
             sendData2(insideTag);
 
 
-
         }
     }
 
@@ -162,14 +157,14 @@ public class Student_Main extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Student_Main.this, R.style.AlertDialogStyle);
                 AlertDialog.Builder builder1 = new AlertDialog.Builder(Student_Main.this, R.style.AlertDialogStyleGood);
                 if (response.isSuccessful()) {
-                    if(responseModel.isStatus()) {
-                    builder1.setMessage("You are Present in" + insidetag)
-                            .setPositiveButton("good", (dialogInterface, i) -> openActivity(Student_Class_Attending.class))
-                            .setNegativeButton("Cancel", null);
-                    AlertDialog alert1 = builder1.create();
-                    alert1.show();
-                    alert1.getWindow().setLayout(900, 900);}
-                    else {
+                    if (responseModel.isStatus()) {
+                        builder1.setMessage("You are Present in" + insidetag)
+                                .setPositiveButton("good", (dialogInterface, i) -> openActivity(Student_Class_Attending.class))
+                                .setNegativeButton("Cancel", null);
+                        AlertDialog alert1 = builder1.create();
+                        alert1.show();
+                        alert1.getWindow().setLayout(900, 900);
+                    } else {
                         builder.setMessage("Not A Classroom")
                                 .setNegativeButton("Cancel", null);
                         AlertDialog alert = builder.create();
@@ -177,7 +172,8 @@ public class Student_Main extends AppCompatActivity {
                         alert.getWindow().setLayout(900, 900);
 
 
-                    }                } else {
+                    }
+                } else {
 
                 }
                 Toast.makeText(Student_Main.this, responseModel.getRemarks(), Toast.LENGTH_SHORT).show();
