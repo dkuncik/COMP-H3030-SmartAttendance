@@ -29,7 +29,6 @@ public class Login extends AppCompatActivity {
     SharedPreferences StudentName;
 
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -57,7 +56,28 @@ public class Login extends AppCompatActivity {
         }
 
 
+
         login.setOnClickListener(view -> sendDataCredential());
+
+        login.setOnClickListener(view -> {
+
+            if (username.getText().toString().trim().equals(GoodUsername) && password.getText().toString().trim().equals(GoodPassword)) {
+
+                NameToSend = username.getText().toString();
+                SharedPreferences.Editor editor = StudentName.edit();
+                editor.putString("name", NameToSend);
+                editor.apply();
+
+
+                Intent intent2 = new Intent(Login.this, Student_Main.class);
+                startActivity(intent2);
+
+
+            } else {
+                Toast.makeText(getApplicationContext(), "Incorrect ID or PASSWORD", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
 
         remember.setOnCheckedChangeListener((compoundButton, b) -> {

@@ -67,10 +67,10 @@
         android:layout_marginTop="67dp"
         android:ems="10"
         android:hint="@string/enter_module_code_eg_comp_h3033"
+        android:importantForAutofill="no"
         android:inputType="textPersonName|text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentClass_Leave_Submenu"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/studentClass_Leave_Submenu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
