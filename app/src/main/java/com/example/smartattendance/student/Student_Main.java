@@ -37,7 +37,6 @@ public class Student_Main extends AppCompatActivity {
     SharedPreferences NFCtag;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

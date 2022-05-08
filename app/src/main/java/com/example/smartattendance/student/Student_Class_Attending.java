@@ -58,13 +58,13 @@ public class Student_Class_Attending extends AppCompatActivity {
                 return;
             }
 
-            sendData(UsernameToSend,NFCtoSend,datetime);
+            sendData(UsernameToSend, NFCtoSend, datetime);
         });
 
 
     }
 
-    public void sendData(String Usernametosend,String NFCtoSend,String datetime) {
+    public void sendData(String Usernametosend, String NFCtoSend, String datetime) {
 
 
         String moduleCodes = moduleCode.getText().toString().trim();
@@ -81,7 +81,7 @@ public class Student_Class_Attending extends AppCompatActivity {
 
         APIsInterface api = retrofit.create(APIsInterface.class);
 
-        Call<ResponseModel> call = api.sendData(Usernametosend, NFCtoSend, moduleCodes,datetime);
+        Call<ResponseModel> call = api.sendData(Usernametosend, NFCtoSend, moduleCodes, datetime);
 
         call.enqueue(new Callback<ResponseModel>() {
             @Override
