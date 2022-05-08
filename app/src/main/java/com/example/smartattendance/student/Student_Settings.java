@@ -1,6 +1,7 @@
 package com.example.smartattendance.student;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -11,15 +12,24 @@ import com.example.smartattendance.R;
 
 public class Student_Settings extends AppCompatActivity {
     @Override
+
+
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_settings);
 
         Button logout = findViewById(R.id.student_Settings_Logout);
+        Button GoBack = findViewById(R.id.student_Settings_GoBack);
         logout.setOnClickListener(view -> {
+            SharedPreferences preferences = getSharedPreferences("checkbox",MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putString("remember","false");
+            editor.apply();
             openActivity(Login.class);
-            finish();
+
         });
+        GoBack.setOnClickListener(view -> openActivity(Student_Main.class));
+
     }
 
     public void openActivity(Class activity) {

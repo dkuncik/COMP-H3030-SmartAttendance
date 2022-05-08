@@ -1,5 +1,6 @@
 package com.example.smartattendance.student;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,6 +24,7 @@ public class Student_Class_Attending extends AppCompatActivity {
 
     public EditText moduleCode;
     Button sendDatabtn;
+    Button goBack;
 
     String password3 = "boss";
 
@@ -42,6 +44,11 @@ public class Student_Class_Attending extends AppCompatActivity {
 
         moduleCode = findViewById(R.id.Module_Code);
         sendDatabtn = findViewById(R.id.Click_Present);
+        goBack = findViewById(R.id.studentClass_Attending_GOback);
+
+        goBack.setOnClickListener(view ->{openActivity(Student_Main.class);});
+
+
 
 
         sendDatabtn.setOnClickListener(view -> {
@@ -103,4 +110,9 @@ public class Student_Class_Attending extends AppCompatActivity {
             }
         });
     }
+    public void openActivity(Class activity) {
+        Intent intent = new Intent(this, activity);
+        startActivity(intent);
+    }
+
 }

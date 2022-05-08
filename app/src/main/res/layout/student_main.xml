@@ -36,25 +36,10 @@
         app:layout_constraintTop_toBottomOf="@+id/studentMainMenu_Header" />
 
     <Button
-        android:id="@+id/ReadBtt"
-        android:layout_width="272dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="64dp"
-        android:backgroundTint="@color/button_color_green"
-        android:onClick="ReadOnClick"
-        android:text="@string/scan_nfc_card"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentMainMenu_Submenu" />
-
-    <Button
         android:id="@+id/studentMainMenu_Timetable"
         android:layout_width="272dp"
         android:layout_height="85dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="186dp"
         android:backgroundTint="@color/button_color_green"
         android:text="@string/timetable"
         android:textColor="@android:color/white"
@@ -62,7 +47,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ReadBtt" />
+        app:layout_constraintTop_toBottomOf="@+id/studentMainMenu_Submenu" />
 
     <Button
         android:id="@+id/studentMainMenu_Settings"
@@ -77,4 +62,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studentMainMenu_Timetable" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="97dp"
+        android:text="Please Scan The Card"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentMainMenu_Submenu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

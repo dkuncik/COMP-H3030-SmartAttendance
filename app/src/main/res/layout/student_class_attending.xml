@@ -47,12 +47,12 @@
         tools:textColor="@android:color/white" />
 
     <Button
-        android:id="@+id/studentClass_Leave_Terminate"
+        android:id="@+id/studentClass_Attending_GOback"
         android:layout_width="272dp"
         android:layout_height="85dp"
         android:layout_marginTop="72dp"
         android:backgroundTint="@color/button_color_red"
-        android:text="@string/terminate_session"
+        android:text="@string/go_back1"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,6 +70,7 @@
         android:inputType="textPersonName|text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentClass_Leave_Submenu" />
+        app:layout_constraintTop_toBottomOf="@+id/studentClass_Leave_Submenu"
+        android:importantForAutofill="no" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

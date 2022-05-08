@@ -14,7 +14,7 @@ public class Student_Class_Left extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_class_attending);
 
-        Button end = findViewById(R.id.studentClass_Leave_Terminate);
+        Button end = findViewById(R.id.studentClass_Attending_GOback);
 
     }
 }

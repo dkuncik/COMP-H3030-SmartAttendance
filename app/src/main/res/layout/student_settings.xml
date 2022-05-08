@@ -45,4 +45,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/student_Settings_Submenu" />
+
+    <Button
+        android:id="@+id/student_Settings_GoBack"
+        android:layout_width="272dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="85dp"
+        android:backgroundTint="@color/button_color_red"
+        android:text="@string/go_back"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/student_Settings_Logout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

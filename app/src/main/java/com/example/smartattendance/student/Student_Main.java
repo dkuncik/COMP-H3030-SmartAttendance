@@ -19,15 +19,23 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.smartattendance.R;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class Student_Main extends AppCompatActivity {
     NfcAdapter nfcAdapter;
     Button ReadBtt;
-    String[] values = {"E042", "E043", "LT1", "LT2", "LT3"};
+
 
 
     @Override
@@ -36,7 +44,6 @@ public class Student_Main extends AppCompatActivity {
         setContentView(R.layout.student_main);
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
-        ReadBtt = findViewById(R.id.ReadBtt);
 
 
         if (nfcAdapter != null && nfcAdapter.isEnabled()) {
@@ -49,9 +56,8 @@ public class Student_Main extends AppCompatActivity {
 
         Button settings = findViewById(R.id.studentMainMenu_Settings);
         Button timetable = findViewById(R.id.studentMainMenu_Timetable);
-        Intent intent3 = new Intent(Student_Main.this, Student_Class_Attending.class);
 
-        ReadBtt.setOnClickListener(view -> openActivity(Student_Class_Attending.class));
+
         settings.setOnClickListener(view -> openActivity(Student_Settings.class));
 
 
@@ -111,33 +117,14 @@ public class Student_Main extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void readTag(NdefMessage ndefMessage) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(Student_Main.this, R.style.AlertDialogStyle);
-        AlertDialog.Builder builder1 = new AlertDialog.Builder(Student_Main.this, R.style.AlertDialogStyleGood);
+
         NdefRecord[] ndefRecords = ndefMessage.getRecords();
         if (ndefRecords != null && ndefRecords.length > 0) {
             NdefRecord ndefRecord = ndefRecords[0];
             String insideTag = getTextFromNdefRecord(ndefRecord);
-            Toast.makeText(this, "You are Present in " + insideTag, Toast.LENGTH_LONG).show();
-            boolean contains = Arrays.asList(values).contains(insideTag);
-            if (contains) {
-                builder1.setMessage("You are Present in" + insideTag)
-                        .setPositiveButton("good", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                openActivity(Student_Class_Attending.class);
-                            }
-                        })
-                        .setNegativeButton("Cancel", null);
-                AlertDialog alert1 = builder1.create();
-                alert1.show();
-                alert1.getWindow().setLayout(900, 900);
-            } else {
-                builder.setMessage("Not A Classroom")
-                        .setNegativeButton("Cancel", null);
-                AlertDialog alert = builder.create();
-                alert.show();
-                alert.getWindow().setLayout(900, 900);
-            }
+            sendData2(insideTag);
+
+
 
         }
     }
@@ -146,6 +133,65 @@ public class Student_Main extends AppCompatActivity {
     public void openActivity(Class activity) {
         Intent intent = new Intent(this, activity);
         startActivity(intent);
+    }
+
+    public void sendData2(String insidetag) {
+
+
+        Toast.makeText(this, insidetag, Toast.LENGTH_LONG).show();
+
+
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://46.7.47.239/SmartAttendance/")
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+
+        APIsInterface api = retrofit.create(APIsInterface.class);
+
+        Call<ResponseModel> call = api.sendData2(insidetag);
+
+        call.enqueue(new Callback<ResponseModel>() {
+            @Override
+            public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+
+                ResponseModel responseModel = response.body();
+                AlertDialog.Builder builder = new AlertDialog.Builder(Student_Main.this, R.style.AlertDialogStyle);
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(Student_Main.this, R.style.AlertDialogStyleGood);
+                if (response.isSuccessful()) {
+                    if(responseModel.isStatus()) {
+                    builder1.setMessage("You are Present in" + insidetag)
+                            .setPositiveButton("good", (dialogInterface, i) -> openActivity(Student_Class_Attending.class))
+                            .setNegativeButton("Cancel", null);
+                    AlertDialog alert1 = builder1.create();
+                    alert1.show();
+                    alert1.getWindow().setLayout(900, 900);}
+                    else {
+                        builder.setMessage("Not A Classroom")
+                                .setNegativeButton("Cancel", null);
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                        alert.getWindow().setLayout(900, 900);
+
+
+                    }                } else {
+
+                }
+                Toast.makeText(Student_Main.this, responseModel.getRemarks(), Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onFailure(Call<ResponseModel> call, Throwable t) {
+
+                Toast.makeText(Student_Main.this, "Failed 2", Toast.LENGTH_SHORT).show();
+                Log.e("Error", t.getMessage());
+
+            }
+        });
     }
 
 

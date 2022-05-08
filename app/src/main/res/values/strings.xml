@@ -3,4 +3,6 @@
     <string name="module_code">Module Code</string>
     <string name="present">Present</string>
     <string name="enter_module_code_eg_comp_h3033">Enter Module Code eg. COMP H3033</string>
+    <string name="go_back">Go Back</string>
+    <string name="go_back1">Go Back</string>
 </resources>
