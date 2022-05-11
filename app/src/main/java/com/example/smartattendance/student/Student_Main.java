@@ -87,7 +87,7 @@ public class Student_Main extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_RECEIVER_REPLACE_PENDING);
 
 
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_MUTABLE);
         IntentFilter[] intentFilter = new IntentFilter[]{};
         nfcAdapter.enableForegroundDispatch(this, pendingIntent, intentFilter, null);
         super.onResume();
