@@ -41,9 +41,10 @@ public class Student_Class_Attending extends AppCompatActivity {
         String NFCtoSend = NFCtag.getString("nfc", "");
 
         Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm:ss:dd:MMM:yyyy");
-        String datetime = simpleDateFormat.format(calendar.getTime());
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm:ss-dd/MM/yyyy");
 
+        String datetime = simpleDateFormat.format(calendar.getTime());
+        Toast.makeText(Student_Class_Attending.this,datetime,Toast.LENGTH_SHORT).show();
 
         moduleCode = findViewById(R.id.Module_Code);
         sendDatabtn = findViewById(R.id.Click_Present);
@@ -55,10 +56,12 @@ public class Student_Class_Attending extends AppCompatActivity {
         sendDatabtn.setOnClickListener(view -> {
             if (moduleCode.getText().toString().isEmpty()) {
                 Toast.makeText(Student_Class_Attending.this, "Module Code Required", Toast.LENGTH_SHORT).show();
-                return;
-            }
+            } else {
+                sendData3(UsernameToSend,NFCtoSend,datetime);}
 
-            sendData(UsernameToSend, NFCtoSend, datetime);
+
+
+
         });
 
 
@@ -107,6 +110,51 @@ public class Student_Class_Attending extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void sendData3( String UsernameToSend, String NFCtoSend, String datetime) {
+        String moduleCodes = moduleCode.getText().toString().trim();
+
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://46.7.47.239/SmartAttendance/")
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+
+        APIsInterface api = retrofit.create(APIsInterface.class);
+
+        Call<ResponseModel> call = api.sendData3(moduleCodes);
+
+        call.enqueue(new Callback<ResponseModel>() {
+            @Override
+            public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+
+                ResponseModel responseModel = response.body();
+                if (response.isSuccessful()) {
+                    if(responseModel.isStatus()){
+
+                        sendData(UsernameToSend, NFCtoSend, datetime);
+                    }
+                    else{
+                        Toast.makeText(Student_Class_Attending.this,"Not A Module Code",Toast.LENGTH_SHORT).show();
+                    }
+                    Toast.makeText(Student_Class_Attending.this,responseModel.getRemarks() + moduleCodes,Toast.LENGTH_SHORT).show();
+
+                }
+            }
+
+
+            @Override
+            public void onFailure(Call<ResponseModel> call, Throwable t) {
+
+                Log.e("Error", t.getMessage());
+
+            }
+        });
+
     }
 
     public void openActivity(Class activity) {
