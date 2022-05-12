@@ -33,5 +33,12 @@ public interface APIsInterface {
 
     );
 
+    @FormUrlEncoded
+    @POST("authenticate_module.php")
+    Call<ResponseModel> sendData3(
+            @Field("MODULE") String module
+
+    );
+
 
 }
