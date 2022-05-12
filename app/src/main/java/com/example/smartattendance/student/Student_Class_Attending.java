@@ -1,5 +1,6 @@
 package com.example.smartattendance.student;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -139,9 +140,15 @@ public class Student_Class_Attending extends AppCompatActivity {
                         sendData(UsernameToSend, NFCtoSend, datetime);
                     }
                     else{
-                        Toast.makeText(Student_Class_Attending.this,"Not A Module Code",Toast.LENGTH_SHORT).show();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(Student_Class_Attending.this, R.style.AlertDialogStyle);
+                        builder.setMessage("Not A Module")
+                                .setNegativeButton("Cancel", null);
+                        AlertDialog alert = builder.create();
+                        
+                        alert.show();
+                        alert.getWindow().setLayout(900, 900);
                     }
-                    Toast.makeText(Student_Class_Attending.this,responseModel.getRemarks() + moduleCodes,Toast.LENGTH_SHORT).show();
+
 
                 }
             }
